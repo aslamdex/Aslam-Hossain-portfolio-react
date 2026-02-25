@@ -9,7 +9,7 @@ import Result from "../assets/result.png";
 import Todo from "../assets/todo.png";
 import M from "../assets/mini.png";
 import Login2 from "../assets/login-react.png";
-import Reactimg from "../assets/Reactimg.png";
+import Reactimg from "../assets/reactimg.png";
 
 function Projects() {
     const projects = [
@@ -109,7 +109,7 @@ function Projects() {
             title: "React portfolio",
             description: "Developed a responsive React.js portfolio using Tailwind CSS, components, pages, images, and favicon etc..",
             image: Reactimg,
-            github: "",
+            github: "https://github.com/aslamdex/Aslam-Hossain-portfolio-react.git",
             Live: "",
 
         }

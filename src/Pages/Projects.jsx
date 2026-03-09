@@ -160,20 +160,35 @@ function Projects() {
                 {/* ..................Button section.................. */}
 
 
-                <div className="flex justify-center flex-wrap gap-4 mb-10">
+                <div className="flex justify-center flex-wrap gap-2 sm:gap-4 mb-10">
 
-                    <button className="px-5 py-2 rounded-lg border border-cyan-400  transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105" onClick={() => filterProject('all')}>All</button>
+                    <button className="px-3 py-1 text-sm sm:px-5 sm:py-2 sm:text-base rounded-lg border border-cyan-400 transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105 w-[45%] sm:w-auto"
+                        onClick={() => filterProject('all')}>
+                        All
+                    </button>
 
-                    <button className="px-5 py-2 rounded-lg border border-cyan-400  transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105" onClick={() => filterProject('Html')}>Html/Css</button>
+                    <button className="px-3 py-1 text-sm sm:px-5 sm:py-2 sm:text-base rounded-lg border border-cyan-400 transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105 w-[45%] sm:w-auto"
+                        onClick={() => filterProject('Html')}>
+                        Html/Css
+                    </button>
 
-                    <button className="px-5 py-2 rounded-lg border border-cyan-400  transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105" onClick={() => filterProject('Bootstrap')}>Bootstrap</button>
+                    <button className="px-3 py-1 text-sm sm:px-5 sm:py-2 sm:text-base rounded-lg border border-cyan-400 transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105 w-[45%] sm:w-auto"
+                        onClick={() => filterProject('Bootstrap')}>
+                        Bootstrap
+                    </button>
 
-                    <button className="px-5 py-2 rounded-lg border border-cyan-400  transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105" onClick={() => filterProject('javaScript')}>javaScript</button>
+                    <button className="px-3 py-1 text-sm sm:px-5 sm:py-2 sm:text-base rounded-lg border border-cyan-400 transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105 w-[45%] sm:w-auto"
+                        onClick={() => filterProject('javaScript')}>
+                        JavaScript
+                    </button>
 
-                    <button className="px-5 py-2 rounded-lg border border-cyan-400  transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105" onClick={() => filterProject('React')}>React</button>
-
+                    <button className="px-3 py-1 text-sm sm:px-5 sm:py-2 sm:text-base rounded-lg border border-cyan-400 transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105 w-[45%] sm:w-auto"
+                        onClick={() => filterProject('React')}>
+                        React
+                    </button>
 
                 </div>
+
 
                 {/*................... Grid .................*/}
 

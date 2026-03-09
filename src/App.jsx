@@ -7,8 +7,7 @@ import Skills from './Pages/Skills'
 import Projects from './Pages/Projects'
 import { ImOpt } from 'react-icons/im'
 // import Contact from './Pages/Contact'
-// import Footer from './Components/Footer'
-import Notfound from './Pages/NotFound'
+// import Notfound from './Pages/NotFound'
 import Footer from './Components/Footer'
 
 function App() {

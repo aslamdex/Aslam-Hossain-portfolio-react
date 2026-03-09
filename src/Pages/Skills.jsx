@@ -6,6 +6,7 @@ import {
     FaReact,
     FaPython,
     FaGitAlt,
+    FaBootstrap
 } from "react-icons/fa";
 
 import {
@@ -29,10 +30,9 @@ function Skills() {
         { name: "GitHub", icon: <SiGithub className="text-gray-200 text-5xl md:text-6xl" /> },
         { name: "Firebase", icon: <SiFirebase className="text-[#FFCA28] text-5xl md:text-6xl" /> },
         { name: "AI Tools & Prompting", icon: <FaBrain className="text-cyan-400 text-5xl md:text-6xl" /> },
-        {
-            name: "Vercel",
-            icon: <SiVercel className="text-black text-5xl md:text-6xl" />
-        },
+        { name: "Vercel", icon: <SiVercel className="text-black text-5xl md:text-6xl" /> },
+        { name: "Bootstrap", icon: <FaBootstrap className="text-[#7952B3] text-5xl md:text-6xl" /> }
+
 
     ];
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Portfolio from "../assets/port.png";
 import Tip from "../assets/tips.png";
 import Commerce from "../assets/commerce.png";
@@ -12,6 +12,7 @@ import Login2 from "../assets/login-react.png";
 import Reactimg from "../assets/reactimg.png";
 
 function Projects() {
+
     const projects = [
         {
             title: "My Portfolio",
@@ -20,6 +21,7 @@ function Projects() {
             image: Portfolio,
             github: "https://github.com/aslamdex/Aslam-portfolio.git",
             Live: "https://aslam-portfolio-drab.vercel.app/",
+            category: "html,bootstrap,javascript"
         },
         {
             title: "Tip Calculator",
@@ -28,6 +30,7 @@ function Projects() {
             image: Tip,
             github: "https://github.com/aslamdex/Tip-calculator.git",
             Live: "https://tip-calculator-umber-sigma.vercel.app/",
+            category: "bootstrap,javascript"
         },
         {
             title: "College Website",
@@ -37,6 +40,7 @@ function Projects() {
                 "https://t3.ftcdn.net/jpg/09/81/22/52/360_F_981225210_NBBkqMdSxUaf7X7Y5rGTRIrJXqUs8zdt.jpg",
             github: "https://github.com/aslamdex/college-website.git",
             Live: "#",
+            category: "html,css"
         },
         {
             title: "E-Commerce Store",
@@ -45,6 +49,7 @@ function Projects() {
             image: Commerce,
             github: "https://github.com/aslamdex/e-commerce.git",
             Live: "#",
+            category: "bootstrap,javascript"
 
         },
         {
@@ -54,6 +59,7 @@ function Projects() {
             image: El,
             github: "https://github.com/aslamdex/electricity-bill.git",
             Live: "https://electricity-bill-three.vercel.app/",
+            category: "javascript"
 
         },
         {
@@ -63,14 +69,16 @@ function Projects() {
             image: Hotel,
             github: "https://github.com/aslamdex/hotelbill-generator.git",
             Live: "https://hotelbill-generator.vercel.app/",
+            category: "javascript"
         },
         {
             title: "Login Page",
             description:
                 "Modern login/signup page with validation & animations.",
-            image: Login1,
-            github: "https://github.com/aslamdex/Loginpage.git",
-            Live: "https://loginpage-xi-sandy.vercel.app/",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDD9dk3bD0hKU02uSjEfxuwGURUJYVfROKrw&s",
+            github: "https://github.com/aslamdex/html-login-page.git",
+            Live: "https://html-login-page.vercel.app/",
+            category: "bootstrap , javascript"
         },
         {
             title: "Result Publish System",
@@ -79,6 +87,7 @@ function Projects() {
             image: Result,
             github: "https://github.com/aslamdex/Result-publish.git",
             Live: "https://result-publish.vercel.app/",
+            category: "javascript, bootstrap"
         },
         {
             title: "Todo App",
@@ -87,6 +96,7 @@ function Projects() {
             image: Todo,
             github: "https://todo-app-one-umber-25.vercel.app/",
             Live: "#",
+            category: "javascript,bootstrap"
         },
         {
             title: "React Mini Projects",
@@ -95,6 +105,7 @@ function Projects() {
             image: M,
             github: "https://github.com/aslamdex/react-task-10.git",
             Live: "https://react-task-10-kohl.vercel.app/",
+            category: "React"
         },
         {
             title: "Login Form (React)",
@@ -103,6 +114,7 @@ function Projects() {
             image: Login2,
             github: "https://github.com/aslamdex/loginform-react.git",
             Live: "https://login-form-react-eosin.vercel.app/",
+            category: "React"
         },
 
         {
@@ -110,10 +122,32 @@ function Projects() {
             description: "Developed a responsive React.js portfolio using Tailwind CSS, components, pages, images, and favicon etc..",
             image: Reactimg,
             github: "https://github.com/aslamdex/Aslam-Hossain-portfolio-react.git",
-            Live: "",
+            Live: "https://aslam-hossain-portfolio-react.vercel.app/",
+            category: "React"
 
         }
     ];
+
+
+
+
+    const [items, setItems] = useState(projects)
+
+    function filterProject(category) {
+
+        if (category === "all") {
+            setItems(projects)
+            return
+        }
+
+        const filtered = projects.filter((project) =>
+            project.category.toLowerCase().includes(category.toLowerCase())
+        )
+
+        setItems(filtered)
+    }
+
+
 
     return (
         <section className="min-h-screen bg-[#0F172A] text-gray-200 py-20 px-6">
@@ -123,9 +157,28 @@ function Projects() {
                     My <span className="text-cyan-400">Projects</span>
                 </h2>
 
-                {/* Grid */}
+                {/* ..................Button section.................. */}
+
+
+                <div className="flex justify-center flex-wrap gap-4 mb-10">
+
+                    <button className="px-5 py-2 rounded-lg border border-cyan-400  transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105" onClick={() => filterProject('all')}>All</button>
+
+                    <button className="px-5 py-2 rounded-lg border border-cyan-400  transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105" onClick={() => filterProject('Html')}>Html/Css</button>
+
+                    <button className="px-5 py-2 rounded-lg border border-cyan-400  transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105" onClick={() => filterProject('Bootstrap')}>Bootstrap</button>
+
+                    <button className="px-5 py-2 rounded-lg border border-cyan-400  transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105" onClick={() => filterProject('javaScript')}>javaScript</button>
+
+                    <button className="px-5 py-2 rounded-lg border border-cyan-400  transition-all duration-300 hover:bg-cyan-400 hover:text-[#0F172A] hover:scale-105" onClick={() => filterProject('React')}>React</button>
+
+
+                </div>
+
+                {/*................... Grid .................*/}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                    {projects.map((project, index) => (
+                    {items.map((project, index) => (
                         <div
                             key={index}
                             className="

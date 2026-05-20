@@ -48,7 +48,7 @@ function Projects() {
                 "Full-stack shopping app with cart system & product filters.",
             image: Commerce,
             github: "https://github.com/aslamdex/e-commerce.git",
-            Live: "#",
+            Live: "https://e-commerce-ten-beryl-49.vercel.app/",
             category: "bootstrap,javascript"
 
         },
@@ -94,8 +94,8 @@ function Projects() {
             description:
                 "Todo application with categories & local storage support.",
             image: Todo,
-            github: "https://todo-app-one-umber-25.vercel.app/",
-            Live: "#",
+            github: "https://github.com/aslamdex/Todo-App.git",
+            Live: "https://todo-app-one-umber-25.vercel.app/",
             category: "javascript,bootstrap"
         },
         {
@@ -150,7 +150,7 @@ function Projects() {
 
 
     return (
-        <section className="min-h-screen bg-[#0F172A] text-gray-200 py-20 px-6">
+        <section id="projects" className="scroll-mt-28 min-h-screen bg-[#0F172A] text-gray-200 py-20 px-6">
             <div className="max-w-7xl mx-auto">
                 {/* Heading */}
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16">

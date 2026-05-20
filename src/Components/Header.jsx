@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+
+const navItems = [
+    { name: 'Home', id: 'home' },
+    { name: 'About', id: 'about' },
+    { name: 'Skills', id: 'skills' },
+    { name: 'Projects', id: 'projects' },
+];
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,6 +20,14 @@ function Header() {
             document.body.style.overflow = '';
         };
     }, [menuOpen]);
+
+    const scrollToSection = (sectionId) => {
+        const target = document.getElementById(sectionId);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        setMenuOpen(false);
+    };
 
     return (
         <>
@@ -32,51 +46,20 @@ function Header() {
 
 
                     <nav className="hidden md:flex items-center gap-8">
-                        <Link
-                            to="/"
-                            className="relative font-bold text-[#FDFCDC] hover:text-[#0F172A] transition-colors duration-200
+                        {navItems.map((item) => (
+                            <button
+                                key={item.id}
+                                type="button"
+                                onClick={() => scrollToSection(item.id)}
+                                className="relative font-bold text-[#FDFCDC] hover:text-[#0F172A] transition-colors duration-200
                          after:content-[''] after:absolute after:left-0 after:-bottom-1
                          after:w-full after:h-[2px] after:bg-[#0F172A]
                          after:scale-x-0 after:origin-center after:transition-transform after:duration-300
                          hover:after:scale-x-100"
-                        >
-                            Home
-                        </Link>
-
-                        <Link
-                            to="/about"
-                            className="relative  font-bold text-[#FDFCDC] hover:text-[#0F172A] transition-colors duration-200
-                         after:content-[''] after:absolute after:left-0 after:-bottom-1
-                         after:w-full after:h-[2px] after:bg-[#0F172A]
-                         after:scale-x-0 after:origin-center after:transition-transform after:duration-300
-                         hover:after:scale-x-100"
-                        >
-                            About
-                        </Link>
-
-                        <Link
-                            to="/skills"
-                            className="relative font-bold text-[#FDFCDC] hover:text-[#0F172A] transition-colors duration-200
-                         after:content-[''] after:absolute after:left-0 after:-bottom-1
-                         after:w-full after:h-[2px] after:bg-[#0F172A]
-                         after:scale-x-0 after:origin-center after:transition-transform after:duration-300
-                         hover:after:scale-x-100"
-                        >
-                            Skills
-                        </Link>
-
-                        <Link
-                            to="/projects"
-                            className="relative font-bold text-[#FDFCDC] hover:text-[#0F172A] transition-colors duration-200
-                         after:content-[''] after:absolute after:left-0 after:-bottom-1
-                         after:w-full after:h-[2px] after:bg-[#0F172A]
-                         after:scale-x-0 after:origin-center after:transition-transform after:duration-300
-                         hover:after:scale-x-100"
-                        >
-                            Projects
-                        </Link>
-
-
+                            >
+                                {item.name}
+                            </button>
+                        ))}
                     </nav>
                 </div>
             </header>
@@ -91,35 +74,16 @@ function Header() {
                         className="flex flex-col items-center gap-8 text-2xl"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <Link
-                            to="/"
-                            className="text-[#FDFCDC] hover:text-[#0F172A]"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            Home
-                        </Link>
-                        <Link
-                            to="/about"
-                            className="text-[#FDFCDC] hover:text-[#0F172A]"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            About
-                        </Link>
-                        <Link
-                            to="/skills"
-                            className="text-[#FDFCDC] hover:text-[#0F172A]"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            Skills
-                        </Link>
-                        <Link
-                            to="/projects"
-                            className="text-[#FDFCDC] hover:text-[#0F172A]"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            Projects
-                        </Link>
-
+                        {navItems.map((item) => (
+                            <button
+                                key={item.id}
+                                type="button"
+                                onClick={() => scrollToSection(item.id)}
+                                className="text-[#FDFCDC] hover:text-[#0F172A]"
+                            >
+                                {item.name}
+                            </button>
+                        ))}
                     </nav>
                 </div>
             )}

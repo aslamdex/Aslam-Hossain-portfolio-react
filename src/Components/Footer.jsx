@@ -31,12 +31,14 @@ function Footer() {
                     </h3>
 
                     <ul className="space-y-3 text-gray-400">
-                        {["Home", "About", "Projects", "Contact"].map((item, i) => (
-                            <li
-                                key={i}
-                                className="cursor-pointer hover:text-cyan-400 transition duration-300 hover:translate-x-2"
-                            >
-                                {item}
+                        {["Home", "About", "Skills", "Projects"].map((item, i) => (
+                            <li key={i}>
+                                <a
+                                    href={`#${item.toLowerCase()}`}
+                                    className="block cursor-pointer hover:text-cyan-400 transition duration-300 hover:translate-x-2"
+                                >
+                                    {item}
+                                </a>
                             </li>
                         ))}
                     </ul>

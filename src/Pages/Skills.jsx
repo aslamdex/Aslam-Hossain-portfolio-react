@@ -37,7 +37,7 @@ function Skills() {
     ];
 
     return (
-        <section className="min-h-screen bg-[#0F172A] text-gray-200 py-20 px-6 md:px-12">
+        <section id="skills" className="scroll-mt-28 min-h-screen bg-[#0F172A] text-gray-200 py-20 px-6 md:px-12">
             <div className="max-w-6xl mx-auto">
 
                 {/* Heading */}

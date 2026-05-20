@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
     return (
-        <section className="min-h-screen bg-[#0F172A] text-gray-200 flex items-center justify-center px-6 md:px-12 py-20">
+        <section id="about" className="scroll-mt-28 min-h-screen bg-[#0F172A] text-gray-200 flex items-center justify-center px-6 md:px-12 py-20">
             <div className="max-w-4xl mx-auto space-y-14 md:space-y-20">
 
                 {/* Heading */}

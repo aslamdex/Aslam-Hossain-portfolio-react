@@ -1,7 +1,6 @@
 import React from 'react';
 import Profile from '../assets/Image.png';
 import Resume from '../assets/Resume.pdf';
-import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
 
@@ -9,7 +8,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 function Home() {
     return (
-        <section className="min-h-screen pt-20 md:pt-0 w-full bg-[#0F172A] text-[#FDFCDC]  flex items-start md:items-center justify-center px-6 md:px-12">
+        <section id="home" className="scroll-mt-28 min-h-screen pt-20 md:pt-0 w-full bg-[#0F172A] text-[#FDFCDC]  flex items-start md:items-center justify-center px-6 md:px-12">
 
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
 

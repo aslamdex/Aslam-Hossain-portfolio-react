@@ -1,6 +1,6 @@
 import React from 'react';
 import Profile from '../assets/Image.png';
-import Resume from '../assets/Resume.pdf';
+import Resume from '../assets/aslam.pdf';
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
 
@@ -94,7 +94,7 @@ bg-clip-text text-transparent">
                             onClick={() => {
                                 const link = document.createElement('a');
                                 link.href = Resume;
-                                link.download = 'Aslam_Hossain_CV.pdf';
+                                link.download = 'aslam.pdf';
                                 document.body.appendChild(link);
                                 link.click();
                                 document.body.removeChild(link);
